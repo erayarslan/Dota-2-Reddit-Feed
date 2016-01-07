@@ -1,0 +1,14 @@
+{
+  "name": "Dota 2 Reddit Feed",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Dont Miss The Reddit!",
+  "content_security_policy": "script-src 'self' https://www.reddit.com; object-src 'self'",
+  "icons": {
+    "128": "assets/icon.png"
+  },
+  "browser_action": {
+    "default_icon": "assets/icon.png",
+    "default_popup": "app.html"
+  }
+}
