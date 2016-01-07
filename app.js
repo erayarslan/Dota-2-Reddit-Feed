@@ -27,14 +27,20 @@ var fetchTopics = function (limit, callback) {
     jsonp: "jsonp",
     dataType: "jsonp",
     success: function (response) {
-      console.log(response);
       callback(response.data.children);
     }
   });
 };
 
 var processTopic = function (topic) {
-  $("#list").append(applyArguments(list_item, topic.ups, topic.url, topic.title, topic.author, topic.link_flair_text, topic.domain));
+  $("#list").append(applyArguments(
+    list_item,
+    topic.ups,
+    topic.url,
+    topic.title,
+    topic.author,
+    topic.link_flair_text,
+    topic.domain));
 };
 
 fetchTopics(25, function (data) {
